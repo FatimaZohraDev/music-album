@@ -1,0 +1,9 @@
+<ion-item *ngIf="song" [routerLink]="'/song/' + song.id" [detail]="false" >
+
+  <ion-label class="ion-text-wrap ion-padding-horizontal">
+    <h2>
+      {{ song.name }}
+    </h2>
+    <h3>Artist name : {{ song.artistName }}</h3>
+  </ion-label>
+  </ion-item>

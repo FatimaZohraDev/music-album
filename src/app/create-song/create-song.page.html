@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/" >
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Add  a new song</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-button routerLink="/" >
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+      <ion-title size="large">Add  a new song</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <form (ngSubmit)="createSong()" class="ion-padding">
+    <ion-item class="ion-margin-bottom">
+      <ion-label position="floating">name</ion-label>
+      <ion-input [(ngModel)]="song.name" name="name" required></ion-input>
+    </ion-item>
+    <ion-item class="ion-margin-bottom">
+      <ion-label position="floating">Artist name</ion-label>
+      <ion-input [(ngModel)]="song.artistName" name="artistName" required></ion-input>
+    </ion-item>
+    <ion-item class="ion-margin-bottom">
+      <ion-label position="floating">Album name</ion-label>
+      <ion-input [(ngModel)]="song.albumName" name="albumName" required></ion-input>
+    </ion-item>
+    <ion-item class="ion-margin-bottom">
+      <ion-label position="floating">Description</ion-label>
+      <ion-textarea [(ngModel)]="song.description" name="description"></ion-textarea>
+    </ion-item>
+    <ion-button expand="block" type="submit">Create Song</ion-button>
+  </form>
+
+</ion-content>
